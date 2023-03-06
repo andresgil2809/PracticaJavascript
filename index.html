@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center py-5">
+        <h1 id="titulo" class="display-3 py-5">Como agregar javascript</h1>
+        <button class="btn btn-danger" id="boton" >Haz click y veras mi poder</button>
+        
+        
+    </div>
+<script>
+    function suma(numero1, numero2 ){
+        return numero1 + numero2; 
+    }
+
+    var x = 7;
+    var y = 72;
+    document.getElementById("titulo").innerHTML=suma(x,y);
+
+
+    function cambiar(){
+        document.getElementById("titulo").innerHTML= "Aja te cambie";
+    }
+    document.getElementById("boton").onclick=function(){
+        cambiar();
+        }
+
+        
+</script>
+</body>
+</html>
