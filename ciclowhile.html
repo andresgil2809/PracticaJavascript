@@ -23,10 +23,24 @@
 
 <script>
 
-     document.getElementById("boton").click()=function(){
-        var usuario=getElementById("numeroCiclos").value;
+     document.getElementById("boton").onclick = function(){
+        var usuario = document.getElementById("numeroCiclos").value;
+        var repeticiones = 1;
+        var maquina=5;
+        var detener = false;
+        
+        while (repeticiones<=usuario && detener==false ){
+            
 
-        console.log(usuario);
+            if(usuario==maquina){
+                document.getElementById("resultado").innerHTML +="Ganaste";
+                detener  = true;
+            }
+            else {
+                document.getElementById("resultado").innerHTML +="Perdiste X: "+ repeticiones + "</br>";
+                repeticiones++;
+            }
+        }
      }
 
 
