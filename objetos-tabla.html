@@ -27,33 +27,33 @@
                         <th> Edad</th>
                     </tr>
                 </thead>
+                
+                
             </table>
         </div>
     </div>    
 
 <script>
-    /* var perro={nombre:"perro",edad:5 , vivo:true}
-    console.log(perro) */
-    function Perro(nombre, edad , vivo){
-        this.nombre = nombre;
-        this.edad = edad;
-        this.vivo = vivo;
+    
+    function capturar() {
+        function Persona(nombre, edad){
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+        var nombrecapturar = document.getElementById("nombre").value;
+        var edadcapturar= document.getElementById("edad").value;
+        // console.log(nombrecapturar);
+
+        nuevoSujeto = new Persona(nombrecapturar,edadcapturar);
+        console.log(nuevoSujeto);
+        Agregar();
     }
 
-    var perro1 = new Perro("Rex", 5 , true);
-    var perro2 = new Perro("Tomy", 6, false);
-
-    console.log(perro1, perro2);
-    
-    var animal = [perro1, perro2];
-    console.log(animal);
-
-    var gatos = [
-        {
-            nombre: "Andres",
-            edad: 5
-        }
-    ]
+    var baseDatos=[];
+    function Agregar(){
+        baseDatos.push(nuevoSujeto);
+        document.getElementById("tabla").innerHTML += '<tbody><td>'+nuevoSujeto.nombre +'</td><td>'+nuevoSujeto.edad+'</td></tbody>';
+    };
 
 </script>
 
